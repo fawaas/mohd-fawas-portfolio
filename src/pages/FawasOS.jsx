@@ -578,7 +578,7 @@ function FawasOS() {
 
                 try {
                   const response = await fetch(
-                    "http://localhost:5001/api/chat",
+                    "https://mohd-fawas-portfolio.onrender.com/api/chat",
                     {
                       method: "POST",
                       headers: {

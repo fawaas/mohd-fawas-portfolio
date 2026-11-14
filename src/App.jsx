@@ -203,13 +203,16 @@ function App() {
     setChatLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5001/api/chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://mohd-fawas-portfolio.onrender.com/api/chat",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ message, history }),
         },
-        body: JSON.stringify({ message, history }),
-      });
+      );
 
       const data = await response.json();
 
